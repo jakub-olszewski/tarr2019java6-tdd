@@ -7,11 +7,17 @@ package pl.sdacademy.tarr2019java6.tdd;
  **/
 public class Cafe {
 
-    public void serveCoffe() {
+    boolean hasCafe;
 
+    public Cafe(){
+        hasCafe = false;
+    }
+
+    public void serveCoffe() {
+        hasCafe = true;
     }
 
     public boolean canServeCoffee() {
-        return true;
+        return hasCafe;
     }
 }
