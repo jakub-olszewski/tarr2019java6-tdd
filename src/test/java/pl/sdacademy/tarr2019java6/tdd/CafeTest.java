@@ -1,5 +1,6 @@
 package pl.sdacademy.tarr2019java6.tdd;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -13,11 +14,19 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  **/
 public class CafeTest {
 
+    private Cafe cafe;
+
+    /**
+     * Kod wykonywany przed kazdym testem
+     */
+    @Before
+    public void before(){
+        // given
+        this.cafe = new Cafe();
+    }
+
     @Test
     public void shouldServeCoffee(){
-
-        // given
-        Cafe cafe = new Cafe();
 
         // when
         cafe.serveCoffe(); // serwuje kawe
@@ -30,9 +39,6 @@ public class CafeTest {
 
     @Test
     public void shouldNotServeCoffee(){
-
-        // given
-        Cafe cafe = new Cafe();
 
         // when
         //nie serwuje kawy
