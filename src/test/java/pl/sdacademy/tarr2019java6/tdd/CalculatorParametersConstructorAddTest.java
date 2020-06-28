@@ -52,6 +52,8 @@ public class CalculatorParametersConstructorAddTest {
 
         // then
         String resultDisplay = calc.display();
-        assertEquals(numberA+"+"+numberB+" must be equal "+expectedResult,expectedResult, resultDisplay);
+        String message = numberA+"+"+numberB+" must be equal "+expectedResult;
+
+        assertEquals(message,expectedResult, resultDisplay);
     }
 }
