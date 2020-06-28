@@ -88,7 +88,6 @@ public class CalculatorTest {
 
     @Test
     public void shouldAddSuccessedExecute(){
-        // TODO Zadanie: Zaimplementuj test dodawania 5 przykladów
 
         //when1
         calc.clear();
