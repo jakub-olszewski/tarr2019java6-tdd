@@ -1,8 +1,10 @@
 package pl.sdacademy.tarr2019java6.tdd;
 
+import org.junit.Before;
 import org.junit.Test;
 //import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  * @author : Jakub Olszewski [http://github.com/jakub-olszewski]
@@ -15,6 +17,13 @@ import static org.junit.Assert.assertEquals;
  **/
 public class CalculatorTest {
 
+    Calculator calc;
+
+    @Before
+    public void before(){
+        // given
+        calc = new CalculatorImpl();
+    }
 
     /**
      * Test wciśnięcia przycisku "0" i sprawdzenie
@@ -23,8 +32,6 @@ public class CalculatorTest {
     @Test
     public void pressNumber0Test(){
 
-        // given
-        Calculator calc = null; // = new CalculatorImpl();
 
         // when
         calc.pressNumber(0);
@@ -41,11 +48,20 @@ public class CalculatorTest {
      * Test pustego wyświetlacza
      */
     @Test
-    public void displayTest(){
+    public void emptyDisplayTest(){
 
-        /**
-         * Zadanie: zaimplementować test pustego wyświetlacza
-         * Pamiętaj o sekcjach
-         */
+        // when
+        // nic nie robimy z kalkulatorem, bo display ma być pusty!
+
+        // then
+
+        // opcja 1
+        String result = calc.display();
+        String expected = "";
+        assertEquals("Display must be empty!",expected,result);
+
+        // opcja 2 - zalecana
+        assertTrue("Display must be empty!",calc.display().isEmpty());
+
     }
 }
