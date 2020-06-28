@@ -26,7 +26,7 @@ public class CafeTest {
     }
 
     @Test
-    public void shouldServeCoffee(){
+    public void shouldServeCoffeeTest(){
 
         // when
         cafe.serveCoffe(); // serwuje kawe
@@ -38,7 +38,7 @@ public class CafeTest {
     }
 
     @Test
-    public void shouldNotServeCoffee(){
+    public void shouldNotServeCoffeeTest(){
 
         // when
         //nie serwuje kawy
