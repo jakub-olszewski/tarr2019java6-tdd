@@ -25,4 +25,9 @@ public interface Calculator {
      * @param numberB liczba druga
      */
     void add(int numberA, int numberB);
+
+    /**
+     * Metoda czyści zawartość wyświetlacza
+     */
+    void clear();
 }

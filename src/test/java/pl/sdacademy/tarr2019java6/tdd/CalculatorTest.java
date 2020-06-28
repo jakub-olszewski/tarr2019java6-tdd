@@ -86,6 +86,44 @@ public class CalculatorTest {
     @Test
     public void shouldAddSuccessedExecute(){
         // TODO Zadanie: Zaimplementuj test dodawania 5 przykladów
+
+        //when1
+        calc.clear();
+        calc.add(3,4);
+
+        //then1
+        // opcja 1
+        assertEquals("7",calc.display());
+        // opcja 2
+        //assertTrue(calc.display().equals("7"));
+
+        //when2
+        calc.clear();
+        calc.add(1,4);
+
+        //then2
+        assertEquals("5",calc.display());
+
+        //when3
+        calc.clear();
+        calc.add(0,4);
+
+        //then3
+        assertEquals("4",calc.display());
+
+        //when4
+        calc.clear();
+        calc.add(7,4);
+
+        //then4
+        assertEquals("11",calc.display());
+
+        //when5
+        calc.clear();
+        calc.add(9,1);
+
+        //then5
+        assertEquals("10",calc.display());
     }
 
     @Test

@@ -27,4 +27,9 @@ public class CalculatorImpl implements Calculator {
     public void add(int numberA, int numberB) {
         display += numberA + numberB;
     }
+
+    @Override
+    public void clear() {
+        display = "";
+    }
 }
