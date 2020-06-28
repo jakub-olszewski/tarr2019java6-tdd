@@ -64,4 +64,33 @@ public class CalculatorTest {
         assertTrue("Display must be empty!",calc.display().isEmpty());
 
     }
+
+    @Test
+    public void shouldDisplay7WhenAdd3And4Test(){
+
+        // when
+        calc.add(3,4);
+
+        // then
+        String result = calc.display();
+        String expected = "7";
+
+        assertEquals("Display must contain 7!",expected,result);
+    }
+
+    @Test
+    public void shouldDisplay1WhenSub5And4Test(){
+        // TODO Zadanie domowe: Zaimplementuj test odejmowania 5 od 4
+    }
+
+    @Test
+    public void shouldAddSuccessedExecute(){
+        // TODO Zadanie: Zaimplementuj test dodawania 5 przykladów
+    }
+
+    @Test
+    public void shouldSubSuccessedExecute(){
+        // TODO Zadanie domowe: Zaimplementuj test odejmowania 5 przykladów
+    }
+
 }

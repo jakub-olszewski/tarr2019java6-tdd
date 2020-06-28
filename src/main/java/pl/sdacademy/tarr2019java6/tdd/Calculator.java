@@ -18,4 +18,11 @@ public interface Calculator {
      * @return zawartość wyświetlacza
      */
     String display();
+
+    /**
+     * Metoda dodaje liczbę A do liczby B
+     * @param numberA liczba pierwsza
+     * @param numberB liczba druga
+     */
+    void add(int numberA, int numberB);
 }
