@@ -2,6 +2,8 @@ package pl.sdacademy.tarr2019java6.tdd;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.JUnit4;
 //import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -15,6 +17,7 @@ import static org.junit.Assert.assertTrue;
  * pressNumber(), display(),
  * add(), sub(), div(), multi() [+, -, / , * ]
  **/
+@RunWith(JUnit4.class)// obecność tej linii jest domyślna
 public class CalculatorTest {
 
     Calculator calc;
