@@ -1,8 +1,11 @@
 package pl.sdacademy.tarr2019java6.tdd;
 
+import net.bytebuddy.pool.TypePool;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 //import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -177,5 +180,52 @@ public class CalculatorTest {
         //then5
         assertEquals("8",calc.display());
     }
+
+    /**
+     * Testowanie wyjątku zasadach ogólnych
+     */
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldDisplayErrorWhenDivByZeroTest(){
+
+        // when
+        calc.div(13,0);
+
+        // then
+    }
+
+    /**
+     * Testowanie wyjątku z użyciem asercji
+     */
+    @Test
+    public void shouldDisplayErrorWhenDivByZero2Test(){
+
+        // when
+        try {
+            calc.div(13, 0);
+        }catch (Exception e){
+            assertTrue(e instanceof IllegalArgumentException);
+            assertTrue(e.getMessage().contains(CalculatorImpl.DIV_ERROR_MESSAGE));
+        }
+        // then
+    }
+
+
+    @Rule
+    public ExpectedException expectedException = ExpectedException.none();
+
+
+    /**
+     * Testowanie wyjątku z użyciem reguły @Rule
+     */
+    @Test
+    public void shouldDisplayErrorWhenDivByZero3Test(){
+        // then
+        expectedException.expect(IllegalArgumentException.class);
+        expectedException.expectMessage(CalculatorImpl.DIV_ERROR_MESSAGE);
+
+        // when
+        calc.div(3,0);
+    }
+
 
 }

@@ -41,6 +41,4 @@ public class CalculatorParametizedJUnitParamsMethodTest {
         assertEquals(message,expected,calc.display());
     }
 
-    // TODO Zadanie: Zrobić test na odejmowanie stwórz metodę parametersToTestSub
-    // @Parameters(method = "parametersToTestSub")
 }
