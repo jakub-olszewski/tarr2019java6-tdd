@@ -52,6 +52,7 @@ public class CalculatorImpl implements Calculator {
         // podczas dzielenia przez zero
         if(numberB==0){
             throw new IllegalArgumentException(DIV_ERROR_MESSAGE);
+            //throw CalculatorException.divide();
         }else
         {
             display += numberA / numberB;
