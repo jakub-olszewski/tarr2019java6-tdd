@@ -38,4 +38,9 @@ public class CalculatorImpl implements Calculator {
         // += dopisanie
         display += numberA - numberB;
     }
+
+    @Override
+    public void multi(int numberA, int numberB) {
+        display += numberA * numberB;
+    }
 }
