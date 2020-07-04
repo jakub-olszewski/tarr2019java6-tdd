@@ -32,4 +32,10 @@ public class CalculatorImpl implements Calculator {
     public void clear() {
         display = "";
     }
+
+    @Override
+    public void sub(int numberA, int numberB) {
+        // += dopisanie
+        display += numberA - numberB;
+    }
 }

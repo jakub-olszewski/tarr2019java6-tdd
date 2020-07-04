@@ -2,6 +2,7 @@ package pl.sdacademy.tarr2019java6.tdd;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 //import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -83,7 +84,14 @@ public class CalculatorTest {
 
     @Test
     public void shouldDisplay1WhenSub5And4Test(){
-        // TODO Zadanie domowe: Zaimplementuj test odejmowania 5 od 4
+        // when
+        calc.sub(5,4);
+
+        // then
+        String result = calc.display();
+        String expected = "1";
+
+        assertEquals("Display must contain 1!",expected,result);
     }
 
     @Test
@@ -130,7 +138,44 @@ public class CalculatorTest {
 
     @Test
     public void shouldSubSuccessedExecute(){
-        // TODO Zadanie domowe: Zaimplementuj test odejmowania 5 przykladów
+
+        //when1
+        calc.clear();
+        calc.sub(3,4);
+
+        //then1
+        // opcja 1
+        assertEquals("-1",calc.display());
+        // opcja 2
+        //assertTrue(calc.display().equals("7"));
+
+        //when2
+        calc.clear();
+        calc.sub(1,4);
+
+        //then2
+        assertEquals("-3",calc.display());
+
+        //when3
+        calc.clear();
+        calc.sub(0,4);
+
+        //then3
+        assertEquals("-4",calc.display());
+
+        //when4
+        calc.clear();
+        calc.sub(7,4);
+
+        //then4
+        assertEquals("3",calc.display());
+
+        //when5
+        calc.clear();
+        calc.sub(9,1);
+
+        //then5
+        assertEquals("8",calc.display());
     }
 
 }

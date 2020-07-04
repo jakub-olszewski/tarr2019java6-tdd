@@ -30,4 +30,6 @@ public interface Calculator {
      * Metoda czyści zawartość wyświetlacza
      */
     void clear();
+
+    void sub(int numberA, int numberB);
 }
